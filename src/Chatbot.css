@@ -90,3 +90,19 @@
   background-color: #90ee90;
   cursor: not-allowed;
 }
+
+.user-message {
+  text-align: center; /* keep user messages centered */
+  background-color: #e0f7fa;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin: 6px 0;
+}
+
+.bot-message {
+  text-align: left; /* force bot messages to left align */
+  background-color: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin: 6px 0;
+}
