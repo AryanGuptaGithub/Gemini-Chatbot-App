@@ -1,5 +1,22 @@
 .App {
   text-align: center;
+ 
+}
+
+
+.chatbot-header{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.chatbot-header img{
+  width: 50px;
+  height: 50px;
+  
+  margin: 1rem;
 }
 
 .App-logo {
@@ -11,6 +28,11 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.Chatbot-title{
+      font-size: 2rem;
+      padding:  1rem 0; 
 }
 
 .App-header {
@@ -26,6 +48,15 @@
 
 .App-link {
   color: #61dafb;
+}
+.chatbot-header{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+  
+  
+ 
 }
 
 @keyframes App-logo-spin {

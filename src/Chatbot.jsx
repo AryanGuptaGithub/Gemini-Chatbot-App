@@ -62,10 +62,16 @@ async function generateContent(prompt) {
   }
 }
 
-export default function App() {
+export default function App({ setShowChatbot }) {
+
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+
+
+  const toggleChatbot = () => {
+    setShowChatbot(prev => !prev);
+  };
 
   const sendMessage = async () => {
     if (input.trim() === "") return;
@@ -92,7 +98,20 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100 font-inter pb-10 p-10 space-y-4 border ">
+    <>
+    <div className="chatbot-header">
+      <button onClick={toggleChatbot}><img style={{width:"30px", height:"30px"}} src="./back-button_93634.png" alt="" /></button>
+      <div className="flex items-center">
+        <img
+          src="https://png.pngtree.com/png-vector/20230225/ourmid/pngtree-smart-chatbot-cartoon-clipart-png-image_6620453.png"
+          alt="chatbot logo"
+        
+        />
+        <h1 className="Chatbot-title">Welcome Ai Chatbot</h1>
+        </div>
+        <div></div>
+      </div>
+    <div className="flex flex-col  bg-gray-100 font-inter pb-10 p-10 space-y-4 border h-screen ">
       <div className="flex-grow overflow-y-auto p-4 space-y-4 ">
         {messages.map((msg, index) => (
           <div
@@ -156,5 +175,6 @@ export default function App() {
         </button>
       </div>
     </div>
+    </>
   );
 }

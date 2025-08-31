@@ -106,3 +106,7 @@
   border-radius: 12px;
   margin: 6px 0;
 }
+
+.page-height{
+  height: screen;
+}
